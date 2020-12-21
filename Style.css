@@ -1,0 +1,117 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --bggradient: linear-gradient(to bottom, #38e0c4, #164b69);
+}
+.container-fluid{
+    background: var(--bggradient);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.column{
+    padding:15px 15px 15px 15px;
+    border-radius: 10px;
+    background-color:transparent;
+    box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+    background: rgba(255,255,255,0.3);
+}
+#task{
+    margin: 15px;
+    padding: 10px;
+    min-width:400px;
+    border: 2px solid white;
+    border-radius: 25px;
+}
+#task::placeholder{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 15px;
+    color: darkslategray;
+    opacity: 0.5;
+}
+#task-btn{
+    padding: 10px 15px 10px 15px ;
+    border: 1px solid white;
+    background-color: white;
+    border-radius: 50%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+#task-btn i{
+    font-size: large;
+}
+.taskarea{
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    
+    
+}
+.taskarea ul{
+    min-width: 470px;
+    margin-top: 10px;
+    border-radius: 15px;
+    list-style-type:none;
+    background-color: white;
+}
+#todo-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 55px;
+    border-radius: 15px;
+    background-color: white;   
+}
+
+#todo-container li{
+    margin-left: 12px;
+    flex: 1;
+    font-family: Verdana;
+    font-size: 20px;
+    padding: 20px;
+}
+#todo-container button{
+    padding: 7px;
+    margin-right: 5px;
+}
+.checked{
+    border-radius: 100px;
+    font-size: 20px;
+    padding: 10px;
+    color: rgb(55, 192, 55);
+    background-color:transparent;
+    border: none;
+}
+.checked:hover{
+    transform: scale(1.2);
+    transition: all 0.5s ease-in-out;
+    color: rgb(55, 192, 55);
+}
+.trashed{
+    font-size: 20px;
+    color: darkslategray;
+    background-color: transparent;
+    border: none;
+    padding: 5px;
+    margin-right: 12px;
+}
+.trashed:hover{
+    transform: scale(1.2);
+    transition: all 0.5s ease-in-out;
+}
+.fa-check-circle, .fa-trash-o{
+    pointer-events: none;
+}
+.done{
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+.fall{
+    transform: translateX(10rem);
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
